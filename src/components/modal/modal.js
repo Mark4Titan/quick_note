@@ -10,6 +10,7 @@ import {
   H2Content,
 } from "./modal.styled";
 import Icons from "../ico/Icons";
+import { TouchableOpacity } from "react-native-web";
 
 const Modal = ({ modal, setModal, openItem, showModal }) => {
   // key controller
@@ -33,9 +34,8 @@ const Modal = ({ modal, setModal, openItem, showModal }) => {
           event.key === "н" ||
           event.key === "Н")
       ) {
-        
         setModal({ masage: "", isModal: false, version: true });
-      }     
+      }
     };
     window.addEventListener("keydown", handleEscape);
     return () => {
@@ -52,16 +52,20 @@ const Modal = ({ modal, setModal, openItem, showModal }) => {
       <DivWraper>
         <DivForm>
           <DivCard>
-            <DivExit onClick={() => ClicButton(false)}>
-              <Icons ico="close" C="StyIco" />
-            </DivExit>
+            <TouchableOpacity onPress={() => ClicButton(false)}>
+              <DivExit>
+                <Icons Name="close" C="StyIco" />
+              </DivExit>
+            </TouchableOpacity>
             <H2Content>Warning!</H2Content>
             <DivText>{modal.masage}</DivText>
             <ContentButton>
-              <ButtonModal onClick={() => ClicButton(true)}>Enter</ButtonModal>
-              <ButtonModal onClick={() => ClicButton(false)}>
-                Cancel
-              </ButtonModal>
+              <TouchableOpacity onPress={() => ClicButton(true)}>
+                <ButtonModal>Enter</ButtonModal>
+              </TouchableOpacity>
+              <TouchableOpacity onPress={() => ClicButton(false)}>
+                <ButtonModal>Cancel</ButtonModal>
+              </TouchableOpacity>
             </ContentButton>
           </DivCard>
         </DivForm>

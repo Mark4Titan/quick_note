@@ -47,24 +47,24 @@ const Sidebar = ({
           <UlSidebar>
             <LiSidebar onClick={() => setBurger(!burger)}>
               {burger ? (
-                <Icons ico="burgrtClose" C="StyBut" />
+                <Icons Name="application-outline" C="StyBut" />
               ) : (
-                <Icons ico="burgrtOpen" C="StyBut" />
+                <Icons Name="application-export" C="StyBut" />
               )}
             </LiSidebar>
 
             {(!widthIn || !burger) && (
               <>
                 <LiSidebar onClick={() => addNote()}>
-                  <Icons ico="add" C="StyBut" />
+                  <Icons Name="beaker-plus-outline" C="StyBut" />
                 </LiSidebar>
                 <LiSidebar onClick={() => isDel()}>
-                  <Icons ico="del" C="StyBut" isOpenItem={isOpenItem} />
+                  <Icons Name="beaker-minus-outline" C="StyBut" isOpenItem={isOpenItem} />
                 </LiSidebar>
 
                 <LiSidebar onClick={() => isEdit()}>
                   <Icons
-                    ico="edit"
+                    Name="application-edit-outline"
                     C="StyBut"
                     isOpenItem={isOpenItem}
                     winEdit={editItem && isOpenItem}

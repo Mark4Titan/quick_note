@@ -18,10 +18,10 @@ const SearchBox = ({ stateSearch, setStateSearch }) => {
         onChange={(e) => ValueIn(e.target.value)}
         value={stateSearch}
       />
-      {stateSearch.length === 0 && <Icons ico="search" C="StyIco" />}
+      {stateSearch.length === 0 && <Icons Name="book-search-outline" C="StyIco" />}
       {stateSearch.length > 0 && (
         <div onClick={() => Clear()}>
-          <Icons ico="clear" C="StyIco" />
+          <Icons Name="block-helper" C="StyIco" />
         </div>
       )}
     </>

@@ -1,6 +1,6 @@
 import styled from "@emotion/native";
 
-export const ButtonMenuDop = styled.Button`
+export const ButtonMenuDop = styled.Text`
   height: 12px;
   width: 24px;
   font-size: 9px;

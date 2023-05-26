@@ -1,3 +1,4 @@
+import { TouchableOpacity } from "react-native-web";
 import Icons from "../../ico/Icons";
 import { ButtonMenuDop, SpanMenuDop } from "./BuutonMenu.styled";
 
@@ -27,22 +28,22 @@ const BuutonMenu = ({ dopMenu, setDopMenu }) => {
 
   return (
     <SpanMenuDop>
-      <ButtonMenuDop
-        
-        onClick={() => DopMenu(1)}
-        bord={`border-top-left-radius: 5px;  
-          border-top-right-radius: 5px`}
-      >
-        <Icons ico="up" C="StyDatabas" colorVar="currentcolor" />
-      </ButtonMenuDop>
-      <ButtonMenuDop
-      
-        onClick={() => DopMenu(-1)}
-        bord={`border-bottom-left-radius: 5px;  
+      <TouchableOpacity onPress={() => DopMenu(1)}>
+        <ButtonMenuDop
+          bord={`border-top-left-radius: 5px;  
+        border-top-right-radius: 5px`}
+        >
+          <Icons Name="menu-up" C="StyDatabas" colorVar="currentcolor" />
+        </ButtonMenuDop>
+      </TouchableOpacity>
+      <TouchableOpacity onPress={() => DopMenu(-1)}>
+        <ButtonMenuDop
+          bord={`border-bottom-left-radius: 5px;  
           border-bottom-right-radius: 5px`}
-      >
-        <Icons ico="down" C="StyDatabas" colorVar="currentcolor" />
-      </ButtonMenuDop>
+        >
+          <Icons Name="menu-down" C="StyDatabas" colorVar="currentcolor" />
+        </ButtonMenuDop>
+      </TouchableOpacity>
     </SpanMenuDop>
   );
 };

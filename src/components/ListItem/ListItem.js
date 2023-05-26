@@ -52,9 +52,9 @@ const ListItem = ({ items, closeCart, openCart, openItem, stateSearch }) => {
               <DivTitle>{elem.title?.substr(0, titlWi.inW)}</DivTitle>
 
               {elem.indexeddb !== undefined && elem.indexeddb ? (
-                <Icons ico="Databas" C="StyDatabas" />
+                <Icons Name="database-outline" C="StyDatabas" />
               ) : (
-                <Icons ico="cloud" C="StyDatabas" />
+                <Icons Name="cloud-outline" C="StyDatabas" />
               )}
             </DivBasis>
             <DivBasis template="1fr/1fr 0.4fr">

@@ -121,7 +121,7 @@ const Workspace = ({
           {(ID === null || openItem.indexeddb) && (
             <View onClick={() => managerActivConect("indexeddb")}>
               <Icons
-                ico={selectiondb.indexeddb && trigerTime ? "rec" : "Databas"}
+                Name={selectiondb.indexeddb && trigerTime ? "floppy" : "database-edit-outline"}
                 C="ButDatabas"
                 activConect={selectiondb.availabIndexeddb}
                 varColor={
@@ -135,7 +135,7 @@ const Workspace = ({
           {(ID === null || openItem.quintadb) && (
             <View onClick={() => managerActivConect("quintadb")}>
               <Icons
-                ico={selectiondb.quintadb && trigerTime ? "rec" : "cloud"}
+                Name={selectiondb.quintadb && trigerTime ? "floppy" : "cloud-outline"}
                 C="ButDatabas"
                 activConect={selectiondb.availabQuintadb}
                 varColor={

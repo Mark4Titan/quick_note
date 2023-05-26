@@ -1,61 +1,12 @@
-import {
-  RiBallPenLine,
-  RiLayout5Line,
-  RiFileAddLine,
-  RiFileForbidLine,
-  RiSoundcloudLine,
-  RiSoundModuleLine,
-  RiSave3Fill,
-  RiLayoutTopLine,
-  RiFileCodeLine,
-  RiCloseLine,
-  RiBriefcase4Line,
-  RiArrowDownSLine,
-  RiArrowUpSLine,
-  RiTimeLine,
-  RiFormatClear,
-} from "react-icons/ri";
-import { BiSearch } from "react-icons/bi";
-import { HiDatabase } from "react-icons/hi";
+import Icon from "react-native-vector-icons/MaterialCommunityIcons";
+
 import styled from "@emotion/native";
 
-const ICO = {
-  edit: { i: RiBallPenLine, text: "Edit" },
-  burgrtClose: { i: RiLayout5Line, text: "Hide" },
-  burgrtOpen: { i: RiLayoutTopLine, text: "Show" },
-  add: { i: RiFileAddLine, text: "Add" },
-  del: { i: RiFileForbidLine, text: "Remove" },
-  clone: { i: RiFileCodeLine, text: "Сlone" },
-
-  settings: { i: RiSoundModuleLine, text: "Settings" },
-  close: { i: RiCloseLine, text: "Close" },
-
-  cloud: { i: RiSoundcloudLine, text: "Quintadb" },
-  Databas: { i: HiDatabase, text: "Indexeddb" },
-  rec: { i: RiSave3Fill, text: "Record" },
-
-  search: { i: BiSearch, text: "Search" },
-  clear: { i: RiFormatClear, text: "Clear" },
-
-  time: { i: RiTimeLine, text: "Time" },
-  summary: { i: RiBriefcase4Line, text: "My Summary" },
-  down: { i: RiArrowDownSLine, text: "Previous" },
-  up: { i: RiArrowUpSLine, text: "Following" },
-};
-const Icons = ({ ico, C, ...props }) => {
-  const text = `${
-    props.activConect === undefined
-      ? ""
-      : props.activConect
-      ? "Connection "
-      : "no connection established "
-  }${ICO[ico].text}`;
-  const Ico = ICO[ico].i();
+const Icons = ({ ico, C, Name="ambulance", Size=40, Color="black", ...props }) => {
   const Component = transforms[C];
-
   return (
-    <Component data-text={text} {...props}>
-      {Ico}
+    <Component {...props}>
+      <Icon name={Name} size={Size} color={Color} />
     </Component>
   );
 };
@@ -67,30 +18,30 @@ export default Icons;
 const StyBefore = `  
   
   &::before{
-    // top: -25px;    
-    position: absolute;
-    border-radius: 5px;
-    background-color: #fafaf8;
-    font-size: 12px;
-    border-color: #d6d6d6;
-    content: " ";
-    ////  box-shadow: 0px 3px 8px 0px #4f4f4f5e;
-    align-items: center;
-    justify-items: center;
-    justify-content: center;
-    opacity: 0;
-    display: grid;
-    white-space: nowrap;
-    transition: all 0.1s ease-out;
-    color: black;
+    // // top: -25px;    
+    // position: absolute;
+    // border-radius: 5px;
+    // background-color: #fafaf8;
+    // font-size: 12px;
+    // border-color: #d6d6d6;
+    // content: " ";
+    // ////  box-shadow: 0px 3px 8px 0px #4f4f4f5e;
+    // align-items: center;
+    // justify-items: center;
+    // justify-content: center;
+    // opacity: 0;
+    // display: grid;
+    // white-space: nowrap;
+    // transition: all 0.1s ease-out;
+    // color: black;
    
   }
   &:hover::before{
-    opacity: 1;
-    width: auto;
-    padding: 5px;
-    height: auto;
-    content: attr(data-text);
+    // opacity: 1;
+    // width: auto;
+    // padding: 5px;
+    // height: auto;
+    // content: attr(data-text);
    
   }
   
@@ -110,8 +61,8 @@ export const StyBut = styled.View`
   cursor: pointer;
 
   & :last-child {
-    width: 20px;
-    height: 20px;
+    width: 60px;
+    height: 60px;
     ${(P) => P.winEdit !== undefined && P.winEdit && "color: darkgreen;"}
   }
   &:hover {

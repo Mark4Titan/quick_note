@@ -15,16 +15,16 @@ export const DivWraper = styled.View`
   backdrop-filter: blur(9.6px);
   -webkit-backdrop-filter: blur(9.6px);
 
-  animation: slid 0.2s ease-in-out;
+  // animation: slid 0.2s ease-in-out;
 
-  @keyframes slid {
-    from {
-      opacity: 0;
-    }
-    to {
-      opacity: 1;
-    }
-  }
+  // @keyframes slid {
+  //   from {
+  //     opacity: 0;
+  //   }
+  //   to {
+  //     opacity: 1;
+  //   }
+  // }
 `;
 export const DivForm = styled.View`
   height: 100%;
@@ -55,7 +55,7 @@ export const H2Content = styled.Text`
   color: brown;
   font-size: 42px;
 `;
-export const ButtonModal = styled.Button`
+export const ButtonModal = styled.Text`
   width: 110px;
   height: 40px;
   display: grid;
@@ -99,7 +99,7 @@ export const DivText = styled.Text`
   color: dimgrey;
   font-size: 17px;
 `;
-export const DivExit = styled.Button`
+export const DivExit = styled.Text`
   position: absolute;
   top: 0;
   right: 0;
