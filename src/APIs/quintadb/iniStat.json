@@ -1,0 +1,21 @@
+{
+    "records": [
+        {
+            "id": "cDWR1biwffWOCMW6ldOSo-",
+            "app_id": "dcPhPsW5HdKykfWQdcNCkv",
+            "entity_id": "dcUSksldLhW7hcTmoJENnK",
+            "values": {
+                "buWR7cRrzdWP7cK8krv09J": "Title",
+                "dcRvtdP8jilOo5WPbxfSou": "14.05.2023  (13:59)",
+                "dcSCoUW7bdH4kgW4HSFGOo": "Content"
+            },
+            "rel_values": null,
+            "subform_values": {},
+            "approved": false,
+            "created_at": "2023-05-14T11:16:56.000Z",
+            "updated_at": "2023-05-14T11:16:56.000Z",
+            "added_by": "Василь Андрейчук",
+            "user_ids": null
+        }
+    ]
+}

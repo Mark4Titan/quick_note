@@ -1,0 +1,11 @@
+{
+  "expo": {
+    "name": "quick_note",
+    "slug": "quick_note",
+    "version": "1.0.0",
+    "assetBundlePatterns": [
+      "**/*"
+    ]
+  },
+  "name": "quick_note"
+}
